@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import "variables.scss";
+@import "mixins.scss";
+
+@import "common.scss";
+@import "base/typography";
+@import "layout/header";
+@import "layout/layout";
+@import "layout/footer";
+
+@import "pages/homepage";
+
+@import "components/portfolio";
+@import "components/testimonial";
+@import "components/datafence_blogs";
+@import "components/team-member";

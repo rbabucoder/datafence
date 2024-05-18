@@ -1,0 +1,72 @@
+.testimonial {
+  margin-top: 20px;
+  /* Slick arrow common styling */
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background-color: #ff0000; /* Example background color, adjust as needed */
+    border: none;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: transparent !important;
+  }
+
+  /* Specific positions for arrows */
+  .slick-prev {
+    left: 80%;
+    transform: translate(-150%, -50%); /* Adjust as needed */
+  }
+
+  .slick-next {
+    left: 80%;
+    transform: translate(50%, -50%); /* Adjust as needed */
+  }
+
+  /* Arrow icon styling */
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 40px;
+    color: white;
+  }
+
+  /* Adjustments for positioning */
+  .testimonial-slider {
+    position: relative;
+  }
+
+  &__content {
+    padding: 50px 40px;
+    background: rgba(19, 107, 150, 0.4);
+
+    .testimonial__quote-icon {
+      margin-bottom: 20px;
+    }
+    .testimonial__text {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .testimonial__author {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      &-img {
+        border-radius: 50%;
+        width: 57px;
+        height: 57px;
+      }
+      &-details {
+        .testimonial__author-name,
+        .testimonial__author-role {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.team {
+  .slick-list {
+    .slick-track {
+      .slick-slide {
+        margin: 0 30px 0 0;
+        .team__member {
+          &-image {
+            background: #092735;
+            img {
+              width: 100%;
+            }
+          }
+          &-info {
+            background: #0e415b;
+            padding: 30px;
+            .team__member-name {
+              color: #fff;
+              font-size: 1.125rem;
+              margin-bottom: 5px;
+            }
+            .team__member-role {
+              font-size: 0.875rem;
+              color: #fff;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+  .slick-dots {
+    position: relative;
+    li {
+      width: 30px;
+      height: 20px;
+      button {
+        font-size: 12px; /* Adjust size as needed */
+        color: none; /* Adjust color as needed */
+        content: ""; /* Ensure it doesn't inherit content from the theme */
+        background: rgba(11, 100, 144, 0.5); /* Adjust background color as needed */
+        width: 30px; /* Adjust size as needed */
+        height: 12px; /* Adjust size as needed */
+        display: block;
+        border-radius: 0; /* Make them square */
+        &::before {
+          display: none;
+        }
+      }
+      &.slick-active {
+        button {
+          background: #0B6490;
+        }
+      }
+    }
+  }
+}

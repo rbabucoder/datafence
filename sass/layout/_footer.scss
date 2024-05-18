@@ -1,0 +1,146 @@
+footer {
+  .footer__container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 2fr;
+    gap: 10px;
+    padding: 50px 0;
+    .footer__company-section,
+    .footer__solutions-section,
+    .footer__logo-section {
+      .footer__logo {
+        margin-bottom: 2rem;
+      }
+      .footer__description {
+        font-size: 1rem;
+        color: #656567;
+        line-height: 1.5;
+      }
+      .footer__title {
+        margin-bottom: 2rem;
+      }
+      .footer__list {
+        margin-left: 20px;
+        li {
+          &::marker {
+            color: #8e0301 !important;
+            font-size: 18px;
+          }
+          margin-bottom: 20px;
+
+          a {
+            text-decoration: none;
+            color: #656567;
+          }
+        }
+      }
+    }
+    .footer__newsletter-section {
+      width: 100%;
+      .footer__newsletter-content {
+        background: #0e3b51;
+        padding: 50px;
+        .footer__newsletter-title {
+          color: #fff;
+          font-size: 1.25rem;
+          margin-bottom: 0.625rem;
+        }
+        .footer__newsletter-description {
+          color: #5d7b8a;
+          margin-bottom: 1rem;
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          input[type="email"] {
+            background: #e7eef5;
+            padding: 15px 20px;
+            border: 0;
+            outline: 0;
+            color: #000;
+            font-size: 1rem;
+            width: 100%;
+          }
+          input[type="submit"] {
+            max-width: 114px !important;
+            color: #fff;
+            padding: 10px 20px;
+            border: 0;
+            outline: 0;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+  .footer__bar {
+    background: #0e3b51;
+    &-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      .footer__bar-text {
+        color: #fff;
+      }
+      .footer__bar-list {
+        list-style: none;
+
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        .footer__bar-item {
+          .footer__bar-link {
+            text-decoration: none;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  footer {
+    .footer__container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    @include section-common-padding;
+    .footer__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 10px;
+      .footer__logo-section,
+      .footer__company-section,
+      .footer__solutions-section {
+        .footer__logo,
+        .footer__title {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .footer__bar {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .footer__bar {
+    flex-direction: column;
+    gap: 20px;
+    &-container{
+      padding: 15px !important;
+    }
+    .footer__bar-list {
+      gap: 10px !important;
+      justify-content: center;
+    }
+  }
+}

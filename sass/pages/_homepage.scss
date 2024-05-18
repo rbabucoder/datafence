@@ -1,0 +1,112 @@
+.home {
+  .text-gradient-red {
+    background: linear-gradient(
+      to bottom,
+      #df0a0a,
+      #ffffff
+    ); /* Adjust the gradient colors as needed */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero-section {
+    position: relative;
+    z-index: -1;
+  }
+  .sales-boost {
+    .sales-boost-content-col {
+      .sales-boost-sub-heading {
+        position: relative;
+        padding-left: 20px;
+        &::before {
+          content: "";
+          background: $global-primary-color;
+          width: 12px;
+          height: 12px;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          @media(max-width: 768px){
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .focus-section {
+    .focus-section-counter-row {
+      .focus-section-icon-col {
+        padding: 20px;
+        background: rgba(19, 107, 150, 0.4);
+      }
+    }
+  }
+  .what-we-do {
+    .what-we-do-grid-row {
+      .what-we-do-grid-col {
+        padding: 20px;
+        box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+          rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+      }
+    }
+  }
+  .contact-info {
+    .contact-info-content-col {
+      .contact-info-icon-grid {
+        .elementor-icon-box-wrapper {
+          .elementor-icon-box-icon {
+            background: #0e3b51;
+            padding: 40px;
+          }
+          .elementor-icon-box-content {
+            .elementor-icon-box-title,
+            .elementor-icon-box-description {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .contact-info-form-col {
+      .contact-info-form-main {
+        background: #0e3b51;
+        padding: 50px 30px 0;
+        .contact-info-form-heading {
+          .elementor-heading-title {
+            color: #fff;
+            font-size: 2rem;
+          }
+        }
+        .contact-info-form-desc {
+          p {
+            font-size: 1rem;
+            color: #fff;
+          }
+        }
+        .contact-info-form {
+          form {
+            input,
+            textarea {
+              width: 100%;
+              background: #0d4057;
+              padding: 15px 20px;
+              border-radius: 10px;
+              margin-bottom: 20px;
+              border: 1px solid #eeeeee;
+            }
+            input[type="submit"] {
+              color: #fff;
+              font-size: 1rem;
+              font-weight: 600;
+            }
+            input[type="email"] {
+              content: "";
+            }
+          }
+        }
+      }
+    }
+  }
+}
