@@ -45,26 +45,11 @@
   }
   .what-we-do {
     .what-we-do-grid-row {
-
-      @for $i from 1 through 4 {
-        .what-we-do-grid-col:nth-of-type(#{$i}) {
-          padding: 20px;
-          box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
-            rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-          position: relative;
-      
-          &::before {
-            content: "0#{$i}";
-            position: absolute;
-            top: 12%;
-            left: 71%;
-            font-size: 3rem;
-            font-weight: 900;
-            color: rgba(223, 10, 10, 0.5);
-          }
-        }
+      .what-we-do-grid-col {
+        padding: 20px;
+        box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+          rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
       }
-      
     }
   }
   .contact-info {
