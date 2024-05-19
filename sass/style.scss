@@ -9,10 +9,12 @@
 @import "common.scss";
 @import "base/typography";
 @import "layout/header";
+@import "components/breadcrumbs";
 @import "layout/layout";
 @import "layout/footer";
 
 @import "pages/homepage";
+@import "pages/contact-us";
 
 @import "components/portfolio";
 @import "components/testimonial";

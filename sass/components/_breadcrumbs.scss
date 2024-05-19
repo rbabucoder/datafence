@@ -1,0 +1,57 @@
+.datafence-breadcrumb {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  .breadcrumb-container {
+    padding: 80px 30px;
+    .datafence__title {
+      font-size: 3.5rem;
+      color: #fff;
+    }
+    .datafence__description {
+      max-width: 400px;
+      color: #eaf2fc;
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    .datafence__breadcrumb {
+      background: $global-primary-color;
+      padding: 10px 20px;
+      color: #fff;
+      border: none;
+      display: inline-block;
+      .datafence__breadcrumb-link {
+        text-decoration: none;
+        font-size: 1rem;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .datafence-breadcrumb {
+    .breadcrumb-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .datafence__title,
+      .datafence__description,
+      .datafence__breadcrumb {
+        text-align: center;
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .datafence-breadcrumb {
+    .breadcrumb-container {
+      .datafence__title {
+        font-size: 2rem;
+      }
+    }
+  }
+}
