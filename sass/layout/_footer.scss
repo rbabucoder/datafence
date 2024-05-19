@@ -41,6 +41,7 @@ footer {
       }
       .footer__list {
         margin-left: 20px;
+        list-style: disc;
         li {
           &::marker {
             color: #8e0301 !important;
