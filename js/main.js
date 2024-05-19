@@ -113,3 +113,11 @@ jQuery(document).ready(function ($) {
     slidesToScroll: 1,
   });
 });
+
+
+
+// jQuery(document).ready(function($){
+//   const subSubmit = $(".sub-form .sub-form-form form .sub-submit");
+//   subSubmit.val(''); // Clear the existing content  
+//   subSubmit.append(`<img src="../images/arrow.svg" />`);
+// });
