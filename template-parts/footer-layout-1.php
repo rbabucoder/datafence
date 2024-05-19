@@ -97,6 +97,11 @@ if ($footer_bar_menu_id) {
                         'link' => get_theme_mod('footer_youtube_link'),
                         'image' => get_theme_mod('footer_youtube_image'),
                     ),
+                    'Instagram' => array(
+                        'icon' => 'fa-brands fa-youtube',
+                        'link' => get_theme_mod('footer_instagram_link'),
+                        'image' => get_theme_mod('footer_instagram_image'),
+                    ),
                 );
 
                 // Loop through each social platform

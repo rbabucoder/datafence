@@ -153,145 +153,224 @@ function datafence_customize_register($wp_customize)
     );
 
 
-// Add setting for Footer Menu in Column 1
-$wp_customize->add_setting(
-    'footer_menu_col1',
-    array(
-        'default' => '',
-        'sanitize_callback' => 'absint',
-    )
-);
 
-// Add control for Footer Menu in Column 1
-$wp_customize->add_control(
-    'footer_menu_col1_control',
-    array(
-        'label' => __('Footer Menu in Column 1', 'datafence'),
-        'section' => 'footer_settings',
-        'settings' => 'footer_menu_col1',
-        'type' => 'select',
-        'choices' => datafence_get_all_menus(), // Function to retrieve all available menus
-    )
-);
+    // Add setting for Footer Facebook Link
+    $wp_customize->add_setting(
+        'footer_facebook_link',
+        array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw',
+        )
+    );
 
-// Add setting for Footer Title in Column 1
-$wp_customize->add_setting(
-    'footer_title_col1',
-    array(
-        'default' => __('Connect with Us', 'datafence'),
-        'sanitize_callback' => 'sanitize_text_field',
-    )
-);
+    // Add control for Footer Facebook Link
+    $wp_customize->add_control(
+        'footer_facebook_link_control',
+        array(
+            'label' => __('Footer Facebook Link', 'datafence'),
+            'section' => 'footer_settings',
+            'settings' => 'footer_facebook_link',
+            'type' => 'text',
+        )
+    );
 
-// Add control for Footer Title in Column 1
-$wp_customize->add_control(
-    'footer_title_col1_control',
-    array(
-        'label' => __('Footer Title in Column 1', 'datafence'),
-        'section' => 'footer_settings',
-        'settings' => 'footer_title_col1',
-        'type' => 'text',
-    )
-);
+    // Add setting for Footer Facebook Image
+    $wp_customize->add_setting(
+        'footer_facebook_image',
+        array(
+            'default' => '',
+            'transport' => 'refresh',
+        )
+    );
 
-// Add setting for Footer Menu in Column 2
-$wp_customize->add_setting(
-    'footer_menu_col2',
-    array(
-        'default' => '',
-        'sanitize_callback' => 'absint',
-    )
-);
+    // Add control for Footer Facebook Image
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'footer_facebook_image_control',
+            array(
+                'label' => __('Footer Facebook Image', 'datafence'),
+                'section' => 'footer_settings',
+                'settings' => 'footer_facebook_image',
+            )
+        )
+    );
 
-// Add control for Footer Menu in Column 2
-$wp_customize->add_control(
-    'footer_menu_col2_control',
-    array(
-        'label' => __('Footer Menu in Column 2', 'datafence'),
-        'section' => 'footer_settings',
-        'settings' => 'footer_menu_col2',
-        'type' => 'select',
-        'choices' => datafence_get_all_menus(), // Function to retrieve all available menus
-    )
-);
+    // Add setting for Footer Twitter Link
+    $wp_customize->add_setting(
+        'footer_twitter_link',
+        array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw',
+        )
+    );
 
-// Add setting for Footer Title in Column 2
-$wp_customize->add_setting(
-    'footer_title_col2',
-    array(
-        'default' => __('Explore', 'datafence'),
-        'sanitize_callback' => 'sanitize_text_field',
-    )
-);
+    // Add control for Footer Twitter Link
+    $wp_customize->add_control(
+        'footer_twitter_link_control',
+        array(
+            'label' => __('Footer Twitter Link', 'datafence'),
+            'section' => 'footer_settings',
+            'settings' => 'footer_twitter_link',
+            'type' => 'text',
+        )
+    );
 
-// Add control for Footer Title in Column 2
-$wp_customize->add_control(
-    'footer_title_col2_control',
-    array(
-        'label' => __('Footer Title in Column 2', 'datafence'),
-        'section' => 'footer_settings',
-        'settings' => 'footer_title_col2',
-        'type' => 'text',
-    )
-);
+    // Add setting for Footer Twitter Image
+    $wp_customize->add_setting(
+        'footer_twitter_image',
+        array(
+            'default' => '',
+            'transport' => 'refresh',
+        )
+    );
 
- // Add setting for Footer Bar Menu
- $wp_customize->add_setting(
-    'footer_bar_menu',
-    array(
-        'default' => '',
-        'sanitize_callback' => 'absint',
-    )
-);
+    // Add control for Footer Twitter Image
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'footer_twitter_image_control',
+            array(
+                'label' => __('Footer Twitter Image', 'datafence'),
+                'section' => 'footer_settings',
+                'settings' => 'footer_twitter_image',
+            )
+        )
+    );
 
-// Add control for Footer Bar Menu
-$wp_customize->add_control(
-    'footer_bar_menu_control',
-    array(
-        'label' => __('Footer Bar Menu', 'datafence'),
-        'section' => 'footer_settings',
-        'settings' => 'footer_bar_menu',
-        'type' => 'select',
-        'choices' => datafence_get_all_menus(), // Function to retrieve all available menus
-    )
-);
+    // Add setting for Footer Instagram Link
+    $wp_customize->add_setting(
+        'footer_instagram_link',
+        array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw',
+        )
+    );
 
-// Add setting for Footer Bar Content
-$wp_customize->add_setting(
-    'footer_bar_content',
-    array(
-        'default' => '',
-        'sanitize_callback' => 'wp_kses_post',
-    )
-);
+    // Add control for Footer Instagram Link
+    $wp_customize->add_control(
+        'footer_instagram_link_control',
+        array(
+            'label' => __('Footer Instagram Link', 'datafence'),
+            'section' => 'footer_settings',
+            'settings' => 'footer_instagram_link',
+            'type' => 'text',
+        )
+    );
 
-// Add control for Footer Bar Content
-$wp_customize->add_control(
-    'footer_bar_content_control',
-    array(
-        'label' => __('Footer Bar Content', 'datafence'),
-        'section' => 'footer_settings',
-        'settings' => 'footer_bar_content',
-        'type' => 'textarea',
-    )
-);
+    // Add setting for Footer Instagram Image
+    $wp_customize->add_setting(
+        'footer_instagram_image',
+        array(
+            'default' => '',
+            'transport' => 'refresh',
+        )
+    );
+
+    // Add control for Footer Instagram Image
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'footer_instagram_image_control',
+            array(
+                'label' => __('Footer Instagram Image', 'datafence'),
+                'section' => 'footer_settings',
+                'settings' => 'footer_instagram_image',
+            )
+        )
+    );
+
+
+    // Add setting for Footer Pinterest Link
+    $wp_customize->add_setting(
+        'footer_pinterest_link',
+        array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw',
+        )
+    );
+
+    // Add control for Footer Pinterest Link
+    $wp_customize->add_control(
+        'footer_pinterest_link_control',
+        array(
+            'label' => __('Footer Pinterest Link', 'datafence'),
+            'section' => 'footer_settings',
+            'settings' => 'footer_pinterest_link',
+            'type' => 'text',
+        )
+    );
+
+    // Add setting for Footer Pinterest Image
+    $wp_customize->add_setting(
+        'footer_pinterest_image',
+        array(
+            'default' => '',
+            'transport' => 'refresh',
+        )
+    );
+
+    // Add control for Footer Pinterest Image
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'footer_pinterest_image_control',
+            array(
+                'label' => __('Footer Pinterest Image', 'datafence'),
+                'section' => 'footer_settings',
+                'settings' => 'footer_pinterest_image',
+            )
+        )
+    );
+
+    // Add setting for Footer YouTube Link
+    $wp_customize->add_setting(
+        'footer_youtube_link',
+        array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw',
+        )
+    );
+
+    // Add control for Footer YouTube Link
+    $wp_customize->add_control(
+        'footer_youtube_link_control',
+        array(
+            'label' => __('Footer YouTube Link', 'datafence'),
+            'section' => 'footer_settings',
+            'settings' => 'footer_youtube_link',
+            'type' => 'text',
+        )
+    );
+
+    // Add setting for Footer YouTube Image
+    $wp_customize->add_setting(
+        'footer_youtube_image',
+        array(
+            'default' => '',
+            'transport' => 'refresh',
+        )
+    );
+
+    // Add control for Footer YouTube Image
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'footer_youtube_image_control',
+            array(
+                'label' => __('Footer YouTube Image', 'datafence'),
+                'section' => 'footer_settings',
+                'settings' => 'footer_youtube_image',
+            )
+        )
+    );
+
 
     /////////////////////////////////////////////////
-    
+
 
 
 }
 
 
 add_action('customize_register', 'datafence_customize_register');
-
-
-// Function to retrieve all available menus
-function datafence_get_all_menus() {
-    $menus = wp_get_nav_menus();
-    $menu_options = array();
-    foreach ($menus as $menu) {
-        $menu_options[$menu->term_id] = $menu->name;
-    }
-    return $menu_options;
-}
