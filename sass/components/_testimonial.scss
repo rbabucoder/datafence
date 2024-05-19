@@ -16,6 +16,9 @@
     justify-content: center;
     border-radius: 50%;
     background: transparent !important;
+    @media(max-width: 576px){
+      top: 95%
+    }
   }
 
   /* Specific positions for arrows */

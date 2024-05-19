@@ -34,11 +34,12 @@ function datafence_register_menus()
     register_nav_menus(
         array(
             'primary-menu' => __('Primary Menu', 'datafence'),
+            'footer_menu_1' => __('Footer Menu 1'),
+            'footer_menu_2' => __('Footer Menu 2'),
         )
     );
 }
 add_action('init', 'datafence_register_menus');
-
 
 
 

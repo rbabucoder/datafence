@@ -153,7 +153,128 @@ function datafence_customize_register($wp_customize)
     );
 
 
+// Add setting for Footer Menu in Column 1
+$wp_customize->add_setting(
+    'footer_menu_col1',
+    array(
+        'default' => '',
+        'sanitize_callback' => 'absint',
+    )
+);
 
+// Add control for Footer Menu in Column 1
+$wp_customize->add_control(
+    'footer_menu_col1_control',
+    array(
+        'label' => __('Footer Menu in Column 1', 'datafence'),
+        'section' => 'footer_settings',
+        'settings' => 'footer_menu_col1',
+        'type' => 'select',
+        'choices' => datafence_get_all_menus(), // Function to retrieve all available menus
+    )
+);
+
+// Add setting for Footer Title in Column 1
+$wp_customize->add_setting(
+    'footer_title_col1',
+    array(
+        'default' => __('Connect with Us', 'datafence'),
+        'sanitize_callback' => 'sanitize_text_field',
+    )
+);
+
+// Add control for Footer Title in Column 1
+$wp_customize->add_control(
+    'footer_title_col1_control',
+    array(
+        'label' => __('Footer Title in Column 1', 'datafence'),
+        'section' => 'footer_settings',
+        'settings' => 'footer_title_col1',
+        'type' => 'text',
+    )
+);
+
+// Add setting for Footer Menu in Column 2
+$wp_customize->add_setting(
+    'footer_menu_col2',
+    array(
+        'default' => '',
+        'sanitize_callback' => 'absint',
+    )
+);
+
+// Add control for Footer Menu in Column 2
+$wp_customize->add_control(
+    'footer_menu_col2_control',
+    array(
+        'label' => __('Footer Menu in Column 2', 'datafence'),
+        'section' => 'footer_settings',
+        'settings' => 'footer_menu_col2',
+        'type' => 'select',
+        'choices' => datafence_get_all_menus(), // Function to retrieve all available menus
+    )
+);
+
+// Add setting for Footer Title in Column 2
+$wp_customize->add_setting(
+    'footer_title_col2',
+    array(
+        'default' => __('Explore', 'datafence'),
+        'sanitize_callback' => 'sanitize_text_field',
+    )
+);
+
+// Add control for Footer Title in Column 2
+$wp_customize->add_control(
+    'footer_title_col2_control',
+    array(
+        'label' => __('Footer Title in Column 2', 'datafence'),
+        'section' => 'footer_settings',
+        'settings' => 'footer_title_col2',
+        'type' => 'text',
+    )
+);
+
+ // Add setting for Footer Bar Menu
+ $wp_customize->add_setting(
+    'footer_bar_menu',
+    array(
+        'default' => '',
+        'sanitize_callback' => 'absint',
+    )
+);
+
+// Add control for Footer Bar Menu
+$wp_customize->add_control(
+    'footer_bar_menu_control',
+    array(
+        'label' => __('Footer Bar Menu', 'datafence'),
+        'section' => 'footer_settings',
+        'settings' => 'footer_bar_menu',
+        'type' => 'select',
+        'choices' => datafence_get_all_menus(), // Function to retrieve all available menus
+    )
+);
+
+// Add setting for Footer Bar Content
+$wp_customize->add_setting(
+    'footer_bar_content',
+    array(
+        'default' => '',
+        'sanitize_callback' => 'wp_kses_post',
+    )
+);
+
+// Add control for Footer Bar Content
+$wp_customize->add_control(
+    'footer_bar_content_control',
+    array(
+        'label' => __('Footer Bar Content', 'datafence'),
+        'section' => 'footer_settings',
+        'settings' => 'footer_bar_content',
+        'type' => 'textarea',
+    )
+);
 
     /////////////////////////////////////////////////
     
@@ -163,3 +284,14 @@ function datafence_customize_register($wp_customize)
 
 
 add_action('customize_register', 'datafence_customize_register');
+
+
+// Function to retrieve all available menus
+function datafence_get_all_menus() {
+    $menus = wp_get_nav_menus();
+    $menu_options = array();
+    foreach ($menus as $menu) {
+        $menu_options[$menu->term_id] = $menu->name;
+    }
+    return $menu_options;
+}

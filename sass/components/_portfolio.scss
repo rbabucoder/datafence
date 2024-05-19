@@ -8,6 +8,10 @@
     .slick-track {
       .slick-slide {
         margin: 0 25px 0 0;
+        @media(max-width: 576px){
+          margin: 0;
+
+        }
       }
     }
   }

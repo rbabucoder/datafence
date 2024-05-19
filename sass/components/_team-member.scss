@@ -3,6 +3,9 @@
     .slick-track {
       .slick-slide {
         margin: 0 30px 0 0;
+        @media(max-width: 576px){
+          margin: 0;
+        }
         .team__member {
           &-image {
             background: #092735;

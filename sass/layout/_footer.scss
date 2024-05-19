@@ -15,6 +15,27 @@ footer {
         color: #656567;
         line-height: 1.5;
       }
+      .footer__social-links {
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+        .footer__social-item {
+          width: 35px;
+          height: 35px;
+          background: #eaf2fc;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          .footer__social-link {
+            text-decoration: none;
+            i {
+              font-size: 14px;
+            }
+          }
+        }
+      }
       .footer__title {
         margin-bottom: 2rem;
       }
@@ -80,19 +101,21 @@ footer {
       justify-content: space-between;
       align-items: center;
       padding: 20px;
-      .footer__bar-text {
+      .footer__bar-content {
         color: #fff;
       }
-      .footer__bar-list {
-        list-style: none;
+      .menu-footer-bar-container {
+        ul {
+          list-style: none;
 
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        .footer__bar-item {
-          .footer__bar-link {
-            text-decoration: none;
-            color: #fff;
+          display: flex;
+          gap: 20px;
+          flex-wrap: wrap;
+          li {
+            a {
+              text-decoration: none;
+              color: #fff;
+            }
           }
         }
       }
@@ -125,22 +148,34 @@ footer {
         }
       }
     }
-    .footer__bar {
-      flex-direction: column;
-    }
+    // .footer__bar {
+    //   flex-direction: column;
+    // }
   }
 }
 
 @media (max-width: 576px) {
   .footer__bar {
-    flex-direction: column;
-    gap: 20px;
     &-container{
-      padding: 15px !important;
-    }
-    .footer__bar-list {
-      gap: 10px !important;
+      flex-direction: column;
+      gap: 20px;
       justify-content: center;
+      align-items: center;
+      .footer__bar-list{
+        ul{
+          justify-content: center;
+          gap: 10px !important;
+        }
+      }
     }
+    // flex-direction: column;
+    // gap: 20px;
+    // &-container {
+    //   padding: 15px !important;
+    // }
+    // .footer__bar-list {
+    //   gap: 10px !important;
+    //   justify-content: center;
+    // }
   }
 }
