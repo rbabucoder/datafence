@@ -133,3 +133,61 @@ function datafence_team_callback()
     return $output;
 }
 add_shortcode('datafence_team', 'datafence_team_callback');
+
+
+function datafence_team2_callback()
+{
+    ob_start();
+    include ('includes/datafence_team2.php');
+    $output = ob_get_clean();
+    return $output;
+}
+add_shortcode('datafence_team2', 'datafence_team2_callback');
+
+function enqueue_custom_scripts() {
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('load-more-script', JS_DIR. '/load-more.js', array('jquery'), ASSET_VERSION, true);
+
+    // Localize script to pass Ajax URL
+    wp_localize_script('load-more-script', 'ajax_params', array(
+        'ajax_url' => admin_url('admin-ajax.php'),
+    ));
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+
+
+
+function load_more_team_members() {
+    $paged = $_POST['page'];
+    $posts_per_page = 4; // Number of members to load per request
+    $args = array(
+        'post_type' => 'team',
+        'posts_per_page' => $posts_per_page,
+        'paged' => $paged,
+    );
+
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) :
+        while ($query->have_posts()) : $query->the_post();
+            ?>
+            <div class="team2__member">
+                <div class="team2__member-image">
+                    <?php the_post_thumbnail(); ?>
+                </div>
+                <div class="team2__member-info">
+                    <h5 class="team2__member-name"><?php the_title(); ?></h5>
+                    <h6 class="team2__member-role"><?php the_field('role'); ?></h6>
+                </div>
+            </div>
+            <?php
+        endwhile;
+        wp_reset_postdata();
+    else :
+        echo 0;
+    endif;
+
+    wp_die();
+}
+add_action('wp_ajax_load_more_team_members', 'load_more_team_members');
+add_action('wp_ajax_nopriv_load_more_team_members', 'load_more_team_members');

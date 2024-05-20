@@ -4,7 +4,9 @@
   box-sizing: border-box;
 }
 @import "variables.scss";
-@import "mixins.scss";
+
+// Mixins
+@import 'mixins/mixins';
 
 @import "common.scss";
 @import "base/typography";
@@ -13,12 +15,16 @@
 @import "layout/layout";
 @import "layout/footer";
 
+
+
 @import "pages/homepage";
 @import "pages/contact-us";
+@import "pages/about-us";
 @import "pages/our-partener";
 
 @import "components/portfolio";
 @import "components/testimonial";
 @import "components/datafence_blogs";
 @import "components/team-member";
+@import "components/team-member2";
 @import "components/subscribe-form";
