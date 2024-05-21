@@ -1,10 +1,11 @@
 .page-about-us {
   .about-us {
-    &-main-heading-col {
-      .elementor-heading-title {
-        @include corner-border(-7px, -6px, null, null, #fff, -1);
-      }
-    }
+    // &-main-heading-col {
+    //   .elementor-heading-title {
+    //     background-color: #fff;
+    //     // @include corner-border(-7px, -6px, null, null, #fff, -1);
+    //   }
+    // }
     &-main-desc-col {
       .counter-row {
         padding: 0;
@@ -31,8 +32,9 @@
     .about-us-we-heading {
       z-index: 9;
       .elementor-heading-title {
-        @include corner-border(-7px, -6px, null, null, #f3f8ff, -1);
-        font-size: 36px;
+        background: $ternary-color;
+        // @include corner-border(-7px, -6px, null, null, #f3f8ff, -1);
+        // font-size: 36px;
       }
     }
     .about-us-we-tab {
@@ -99,7 +101,7 @@
     .about-us-our-parenter-heading {
       z-index: 9;
       .elementor-heading-title {
-        @include corner-border(-7px, -6px, null, null, #f3f8ff, -1, "42");
+        background: $ternary-color;
       }
     }
     .about-us-our-parenter-btn {
@@ -121,14 +123,14 @@
 }
 
 
-.pro-team{
-  &-heading{
-    z-index: 9  ;
-    .elementor-heading-title{
-      @include corner-border(-7px, -6px, null, null, #fff, -1, "42");
-    }
-  }
-}
+// .pro-team{
+//   &-heading{
+//     z-index: 9  ;
+//     .elementor-heading-title{
+//       @include corner-border(-7px, -6px, null, null, #fff, -1, "42");
+//     }
+//   }
+// }
 
 
 .page-about-us{

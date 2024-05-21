@@ -2,8 +2,8 @@
   &-content-col {
     .our-approach-about-client-heading {
       .elementor-heading-title {
-        @include corner-border(-7px, -6px, null, null, #fff, -1);
-        font-size: 36px;
+        // @include corner-border(-7px, -6px, null, null, #fff, -1);
+        // font-size: 36px;
       }
     }
   }
@@ -40,8 +40,7 @@
     .project-goal-heading {
       z-index: 99999;
       .elementor-heading-title {
-        font-size: 36px;
-        @include corner-border(-7px, -6px, null, null, $extra-color-2, -1);
+        background: $ternary-color;
       }
     }
   }
@@ -53,8 +52,6 @@
   &-content-col{
     .final-outcome-heading{
       .elementor-heading-title{
-        font-size: 36px;
-        @include corner-border(-7px, -6px, null, null, #fff, -1);
       }
     }
   }

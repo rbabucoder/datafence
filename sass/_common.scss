@@ -99,9 +99,57 @@
   .elementor-button {
     padding: 20px 30px;
     border-radius: 50px !important;
-  background-color: $global-primary-color;
-      .elementor-button-text{
-        color: #fff;
+    background-color: $global-primary-color;
+    .elementor-button-text {
+      color: #fff;
+    }
+  }
+}
+
+.common-left-corner-border {
+  z-index: 9999;
+  .elementor-heading-title {
+    position: relative;
+    padding: 10px;
+    background: #fff;
+    font-size: 36px;
+    &::before {
+      content: "";
+      background-color: $global-primary-color;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: -7px;
+      left: -6px;
+      z-index: -1;
+    }
+  }
+}
+
+
+.bg-white-heading{
+  .elementor-heading-title{
+    background: #fff !important; 
+  }
+}
+
+
+.common-companies-grid{
+  &-content-col{
+    .common-companies-grid-btn{
+      .elementor-button{
+        padding: 20px 40px;
+        border-radius: 50px;
+        background-color: $global-primary-color;
       }
+    }
+  }
+  &-image-col{
+    .e-con-inner{
+      .elementor-element{
+        padding: 40px;
+        border: 1px solid #f2f2f2;
+      }
+    }
   }
 }

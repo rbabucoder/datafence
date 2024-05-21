@@ -1,49 +1,46 @@
-@mixin corner-border(
-  $top: null,
-  $left: null,
-  $bottom: null,
-  $right: null,
-  $bg-color: null,
-  $z-index: null,
-  $font-size: null
-) {
-  position: relative;
-  @media(max-width: 576px){
-    text-align: center !important;
-  }
-  padding: 10px;
-  @if $font-size != null {
-    font-size: #{$font-size}px !important;
-  }
+// @mixin corner-border(
+//   $top: null,
+//   $left: null,
+//   $bottom: null,
+//   $right: null,
+//   $bg-color: null,
+//   $z-index: null,
+//   $font-size: null
+// ) {
+//   position: relative;
+//   padding: 10px;
+//   @if $font-size != null {
+//     font-size: #{$font-size}px !important;
+//   }
 
-  @if $bg-color != null {
-    background: $bg-color;
-  }
-  &::before {
-    content: "";
-    background-color: $global-primary-color;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    @if $z-index != null {
-      z-index: $z-index;
-    }
-    @if $top != null {
-      top: $top;
-    }
-    @if $left != null {
-      left: $left;
-    }
-    @if $bottom != null {
-      bottom: $bottom;
-    }
-    @if $right != null {
-      right: $right;
-    }
-    @media (max-width: 768px) {
-      @if $left != null {
-        left: $left + 60px;
-      }
-    }
-  }
-}
+//   @if $bg-color != null {
+//     background: $bg-color;
+//   }
+//   &::before {
+//     content: "";
+//     background-color: $global-primary-color;
+//     width: 50px;
+//     height: 50px;
+//     position: absolute;
+//     @if $z-index != null {
+//       z-index: $z-index;
+//     }
+//     @if $top != null {
+//       top: $top;
+//     }
+//     @if $left != null {
+//       left: $left;
+//     }
+//     @if $bottom != null {
+//       bottom: $bottom;
+//     }
+//     @if $right != null {
+//       right: $right;
+//     }
+//     @media (max-width: 768px) {
+//       @if $left != null {
+//         left: $left + 60px;
+//       }
+//     }
+//   }
+// }
