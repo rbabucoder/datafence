@@ -1,0 +1,61 @@
+.our-approach-about-client {
+  &-content-col {
+    .our-approach-about-client-heading {
+      .elementor-heading-title {
+        @include corner-border(-7px, -6px, null, null, #fff, -1);
+        font-size: 36px;
+      }
+    }
+  }
+  &-project-info-col {
+    .project-info {
+      background-color: $extra-color-1;
+      padding: 30px;
+      .our-approach-about-client-project-info-heading {
+        .elementor-heading-title {
+          color: #fff;
+          font-size: 28px;
+        }
+        margin-bottom: 10px;
+      }
+      .our-approach-about-client-project-info-list {
+        .elementor-widget-container {
+          p {
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 20px;
+          }
+          h4 {
+            color: #fff;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.project-goal {
+  &-content-col {
+    .project-goal-heading {
+      z-index: 99999;
+      .elementor-heading-title {
+        font-size: 36px;
+        @include corner-border(-7px, -6px, null, null, $extra-color-2, -1);
+      }
+    }
+  }
+}
+
+
+
+.final-outcome{
+  &-content-col{
+    .final-outcome-heading{
+      .elementor-heading-title{
+        font-size: 36px;
+        @include corner-border(-7px, -6px, null, null, #fff, -1);
+      }
+    }
+  }
+}

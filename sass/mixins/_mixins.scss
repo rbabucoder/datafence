@@ -8,6 +8,9 @@
   $font-size: null
 ) {
   position: relative;
+  @media(max-width: 576px){
+    text-align: center !important;
+  }
   padding: 10px;
   @if $font-size != null {
     font-size: #{$font-size}px !important;
