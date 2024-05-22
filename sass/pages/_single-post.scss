@@ -1,0 +1,11 @@
+.single-post {
+  &__container {
+    
+  }
+  &__content-wrapper {
+    padding: 80px 0;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+  }
+}

@@ -12,6 +12,12 @@ require_once get_template_directory() . '/includes/customizer.php';
 
 function datafence_theme_setup()
 {
+    add_theme_support('title-tag');
+    add_theme_support('post-thumbnails');
+    add_theme_support('automatic-feed-links');
+    add_theme_support('html5', array('search-form', 'comment-form', 'comment-list', 'gallery', 'caption'));
+    add_theme_support('customize-selective-refresh-widgets');
+
     // Add support for custom logo
     add_theme_support(
         'custom-logo',
