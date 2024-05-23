@@ -1,0 +1,298 @@
+.gain-business {
+  &-img-row {
+    .gain-business-img1-col {
+      padding: 0;
+      .gain-business-img1 {
+        img {
+          width: 100%;
+        }
+        position: relative;
+      }
+      .gain-business-desc {
+        position: absolute;
+        right: 0;
+        bottom: -80px;
+        width: 60%;
+        @media (max-width: 576px) {
+          position: static;
+          width: 100%;
+        }
+        .elementor-widget-container {
+          border-radius: 10px;
+          padding: 50px 50px;
+          color: #fff;
+          font-size: 14px !important;
+          p {
+          }
+          h2,
+          a {
+            color: #fff;
+            i {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .gain-business-img2-col {
+      .gain-business-img2 {
+        position: relative;
+      }
+      .extra-100-sec {
+        position: absolute;
+        bottom: 26px;
+        left: 20px;
+        width: fit-content;
+        @media (max-width: 576px) {
+          top: 10px;
+          left: 10px;
+        }
+      }
+      .gain-business-desc {
+        position: absolute;
+        right: 0;
+        bottom: -80px;
+        width: 60%;
+        @media (max-width: 576px) {
+          position: static;
+          width: 100%;
+        }
+        .elementor-widget-container {
+          min-height: 208px;
+          border-radius: 10px;
+          padding: 50px 50px;
+          color: #fff;
+          font-size: 14px !important;
+          p {
+            margin: 10px 0;
+          }
+          h2,
+          a {
+            color: #fff;
+            i {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.how-it-works {
+  &-content-col {
+    position: relative;
+    &::after {
+      content: "";
+      background: url("./../images/couple-cursive-arrow.png");
+      width: 160px;
+      height: 200px;
+      position: absolute;
+      top: 40%;
+      left: -12%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      @media (max-width: 576px) {
+        top: 47%;
+        left: -10%;
+      }
+    }
+    .how-it-works-grid {
+      position: relative;
+      .how-it-works-num {
+        .elementor-heading-title {
+          background: $primary-color;
+          color: #fff;
+          padding: 20px;
+          width: fit-content;
+        }
+      }
+    }
+  }
+}
+
+.develop-leader-sec {
+  padding: 80px 50px !important;
+  background: $extra-color-1;
+  margin-top: 20px !important;
+  margin-bottom: 50px !important;
+  position: relative;
+  &::after {
+    content: "";
+    background: url("./../images/cursive-arrow-2.svg");
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 70%;
+    left: 50%;
+  }
+  .develop-leader-content-col {
+    .develop-leader-heading {
+      .elementor-heading-title {
+        font-size: 42px;
+        color: #fff;
+      }
+    }
+  }
+  .develop-leader-btn-col {
+    .btn-1 {
+      color: #fff;
+      text-decoration: none;
+      border-radius: 50px;
+      border: 1px solid #fff;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      i.fa-phone {
+        background-color: #fff;
+        padding: 10px;
+        color: $extra-color-1;
+        border-radius: 50%;
+        margin-right: 10px;
+        font-size: 12px;
+      }
+      i.fa-arrow-right {
+        transform: rotate(300deg);
+        margin-left: 10px;
+      }
+    }
+    .btn-2 {
+      color: $extra-color-1;
+      background-color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 15px 20px;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .develop-leader-sec {
+    padding: 50px 10px !important;
+    &::after {
+      left: 0;
+      top: 45%;
+      transform: rotate(102deg);
+    }
+  }
+}
+
+.we-are-here {
+  &-form-col {
+    form {
+      .contact-us {
+        &-heading {
+          h2 {
+            color: #fff !important;
+            background: $extra-color-1;
+            padding: 20px 30px;
+            font-size: 24px;
+            font-weight: 600;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+          }
+        }
+        .contact-us-form {
+          background-color: #fff;
+          padding: 50px 30px;
+          .name-field,
+          .email-field,
+          .phone-field,
+          .msg-field {
+            position: relative;
+          }
+
+          .name-field {
+            &::before {
+              content: "";
+              position: absolute;
+              width: 20px;
+              height: 20px;
+              background: url("./../images/name.svg");
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: center center;
+              top: 20px;
+              left: 20px;
+              z-index: 9999;
+            }
+          }
+          .email-field {
+            &::before {
+              content: "";
+              position: absolute;
+              width: 20px;
+              height: 20px;
+              background: url("./../images/envelope.svg");
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: center center;
+              top: 20px;
+              left: 20px;
+              z-index: 9999;
+            }
+          }
+          .phone-field {
+            &::before {
+              content: "";
+              position: absolute;
+              width: 20px;
+              height: 20px;
+              background: url("./../images/tel.svg");
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: center center;
+              top: 20px;
+              left: 20px;
+              z-index: 9999;
+            }
+          }
+          .msg-field {
+            &::before {
+              content: "";
+              position: absolute;
+              width: 20px;
+              height: 20px;
+              background: url("./../images/msg.svg");
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: center center;
+              top: 20px;
+              left: 20px;
+              z-index: 9999;
+            }
+          }
+          input,
+          textarea {
+            padding: 20px 50px;
+            border: 2px solid #e0ecfc;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            font-size: 1rem;
+            position: relative;
+
+            &::placeholder {
+              color: #656567;
+            }
+          }
+          textarea {
+            max-height: 90px;
+          }
+          input[type="submit"]{
+            max-width: 200px;
+            padding: 20px 30px;
+            text-align: center;
+            background: $extra-color-1;
+            color: #fff;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
