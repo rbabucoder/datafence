@@ -8,7 +8,7 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 50px 30px;
     max-width: 594px;
-    @media(max-width: 768px){
+    @media (max-width: 768px) {
       max-width: 600px;
       width: 100%;
     }
@@ -513,6 +513,19 @@
           font-weight: bold;
         }
       }
+    }
+  }
+}
+
+.courses-template-default {
+  .we-serve {
+
+    .we-serve-image-content {
+      display: none;
+    }
+    
+    .we-serve-image-content.active {
+      display: block;
     }
   }
 }

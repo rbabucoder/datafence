@@ -180,3 +180,25 @@ jQuery(document).ready(function ($) {
     $(".footer-popup-overlay").css("display", "none");
   });
 });
+
+// script.js
+jQuery(document).ready(function($) {
+  const tabs = $(".we-serve-btn");
+  const contents = $(".we-serve-image-content");
+
+  tabs.click(function(e) {
+    e.preventDefault();
+    const tabId = $(this).attr("id");
+    const contentId = tabId.replace("-button", "-content");
+
+    tabs.removeClass("active");
+    $(this).addClass("active");
+
+    contents.removeClass("active");
+    $("#" + contentId).addClass("active");
+  });
+
+  // Show the first tab and content by default
+  tabs.first().addClass("active");
+  contents.first().addClass("active");
+});

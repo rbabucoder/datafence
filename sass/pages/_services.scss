@@ -8,10 +8,11 @@
           width: 100%;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           border-radius: 10px;
+          color: #000;
           &:hover {
             border: 1px solid $global-primary-color;
             .elementor-button-text {
-              color: #000;
+              color: $global-primary-color;
               font-weight: 600;
             }
           }
