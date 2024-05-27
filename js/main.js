@@ -189,13 +189,19 @@ jQuery(document).ready(function($) {
   tabs.click(function(e) {
     e.preventDefault();
     const tabId = $(this).attr("id");
-    const contentId = tabId.replace("-button", "-content");
 
-    tabs.removeClass("active");
-    $(this).addClass("active");
+    // Ensure tabId is not undefined
+    if (tabId) {
+      const contentId = tabId.replace("-button", "-content");
 
-    contents.removeClass("active");
-    $("#" + contentId).addClass("active");
+      tabs.removeClass("active");
+      $(this).addClass("active");
+
+      contents.removeClass("active");
+      $("#" + contentId).addClass("active");
+    } else {
+      console.error("The clicked tab does not have an ID.");
+    }
   });
 
   // Show the first tab and content by default
