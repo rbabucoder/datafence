@@ -181,6 +181,16 @@ function datafence_team_callback()
 add_shortcode('datafence_team', 'datafence_team_callback');
 
 
+function services_sidebar_menu_callback()
+{
+    ob_start();
+    include ('includes/services_sidebar_menu.php');
+    $output = ob_get_clean();
+    return $output;
+}
+add_shortcode('services_sidebar_menu', 'services_sidebar_menu_callback');
+
+
 function datafence_team2_callback()
 {
     ob_start();
@@ -196,9 +206,12 @@ function enqueue_custom_scripts()
     wp_enqueue_script('load-more-script', JS_DIR . '/load-more.js', array('jquery'), ASSET_VERSION, true);
 
     // Localize script to pass Ajax URL
-    wp_localize_script('load-more-script', 'ajax_params', array(
-        'ajax_url' => admin_url('admin-ajax.php'),
-    )
+    wp_localize_script(
+        'load-more-script',
+        'ajax_params',
+        array(
+            'ajax_url' => admin_url('admin-ajax.php'),
+        )
     );
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
