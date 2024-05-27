@@ -1,0 +1,110 @@
+.real-people-grid {
+  .slick-list {
+    .slick-track {
+      margin-bottom: 2rem;
+      .slick-slide {
+        margin-left: 20px;
+        .real-people {
+          background: linear-gradient(
+            180deg,
+            #001769 60%,
+            #00112e 100%
+          ) !important;
+          padding: 50px 60px 270px;
+          border-radius: 20px;
+          &::before {
+            content: "";
+            background: url("./../images/people-quote.svg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            max-width: 300px;
+            max-height: 358px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          &__quote {
+            text-align: center;
+            margin-bottom: 1rem;
+            &-icon {
+              width: 32px;
+              height: 25px;
+              display: inline-block;
+            }
+          }
+          &__title {
+            text-align: center;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 9999;
+            .real-people__heading {
+              font-size: 18px;
+              font-weight: 500;
+              color: #fff;
+              margin-bottom: 1rem;
+            }
+            .real-people__desc {
+              font-weight: 500;
+              color: #fff;
+              font-size: 14px;
+            }
+          }
+          position: relative;
+          &__profile {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 250px;
+            height: 250px;
+            &-image {
+              object-fit: contain;
+              width: 100%;
+              height: 100%;
+            }
+          }
+          &__profile-skill {
+            position: absolute;
+            background-color: #fff;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 50px;
+            bottom: 20%;
+          }
+          &__profile-detail {
+            position: absolute;
+            background-color: #fff;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 50px;
+            bottom: 10%;
+            right: 15px;
+          }
+          &__explore-button {
+            position: absolute;
+            background: #ee2c3c;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 10px;
+            bottom: -24px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.course-testimonials {
+  .testimonial__content {
+    background: rgba(19, 107, 150);
+  }
+}

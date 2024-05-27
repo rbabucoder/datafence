@@ -1,0 +1,73 @@
+.course-post-cards {
+  .slick-list {
+    .slick-track {
+      .slick-slide {
+        margin-right: 20px;
+        margin-bottom: 50px;
+        overflow: hidden;
+        padding-bottom: 50px;
+        .course-post-card {
+          padding: 30px;
+          position: relative;
+          border: 1px solid #dcc8e6;
+          //   overflow: hidden;
+          &::before {
+            content: "";
+            position: absolute;
+            background: url("./../images/course-blob.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            top: -90px;
+            right: -36px;
+            opacity: 0.5;
+            transform: rotate(256deg);
+            // z-index: -1;
+          }
+          .course-post-card-container {
+            .course-post-card__header {
+              max-width: 150px;
+              margin: 0 auto;
+              margin-bottom: 20px;
+              .course-post-card__title {
+                text-align: center;
+                position: relative;
+                z-index: 9999;
+              }
+            }
+            .course-post-card__image {
+              text-align: center;
+              img {
+                position: relative;
+                z-index: 9999;
+                margin: 0 auto;
+                margin-bottom: 20px;
+              }
+            }
+            .course-post-card__thumbnail-image {
+              img {
+                border-radius: 20px;
+                position: relative;
+                z-index: 9999;
+              }
+            }
+          }
+          .course-post-card__footer {
+            text-align: center;
+            position: relative;
+            bottom: -40px;
+            .course-post-card__link {
+              position: relative;
+              z-index: 9999;
+              color: #fff;
+              background: #da202f;
+              padding: 10px 20px;
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

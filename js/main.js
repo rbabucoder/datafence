@@ -112,6 +112,71 @@ jQuery(document).ready(function ($) {
     slidesToShow: 1,
     slidesToScroll: 1,
   });
+
+  $(".common-course-slider, .course_card_2").slick({
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+
+  $(".real-people-slider").slick({
+    arrows: false,
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+
+  $(
+    ".discover-courses .slick-prev, .masterclass-grid .slick-prev, .course-post-cards .slick-prev"
+  ).append('<i class="fa-solid fa-chevron-down"></i>');
+  $(
+    ".discover-courses .slick-next, .masterclass-grid .slick-next, .course-post-cards .slick-next"
+  ).append('<i class="fa-solid fa-chevron-down"></i>');
 });
 
+jQuery(document).ready(function ($) {
+  $(".datafence-popup").on("click", function () {
+    $(".footer-popup-overlay").css("display", "block");
+  });
 
+  $(".datafence-close-mark").on("click", function () {
+    $(".footer-popup-overlay").css("display", "none");
+  });
+});

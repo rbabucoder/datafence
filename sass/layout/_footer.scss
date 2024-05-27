@@ -127,6 +127,7 @@ footer {
 
 @media (max-width: 1024px) {
   footer {
+    padding: 0 15px;
     .footer__container {
       grid-template-columns: 1fr 1fr 1fr;
     }
@@ -156,19 +157,19 @@ footer {
 }
 
 @media (max-width: 576px) {
-footer{
-  .footer__container{
-    padding: 50px 10px 20px;
+  footer {
+    .footer__container {
+      padding: 50px 10px 20px;
+    }
   }
-}
   .footer__bar {
-    &-container{
+    &-container {
       flex-direction: column;
       gap: 20px;
       justify-content: center;
       align-items: center;
-      .footer__bar-list{
-        ul{
+      .footer__bar-list {
+        ul {
           justify-content: center;
           gap: 10px !important;
         }

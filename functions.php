@@ -131,6 +131,46 @@ function datafence_blogs_callback()
 }
 add_shortcode('datafence_blogs', 'datafence_blogs_callback');
 
+function datafence_career_course_callback()
+{
+    ob_start();
+    include ('includes/datafence_career_course.php');
+    $output = ob_get_clean();
+    return $output;
+}
+add_shortcode('datafence_career_course', 'datafence_career_course_callback');
+
+
+
+function datafence_discover_courses_callback()
+{
+    ob_start();
+    include ('includes/datafence_discover_courses.php');
+    $output = ob_get_clean();
+    return $output;
+}
+add_shortcode('datafence_discover_courses', 'datafence_discover_courses_callback');
+
+
+function datafence_real_people_stories_callback()
+{
+    ob_start();
+    include ('includes/datafence_real_people_stories.php');
+    $output = ob_get_clean();
+    return $output;
+}
+add_shortcode('datafence_real_people_stories', 'datafence_real_people_stories_callback');
+
+function datafence_course_card_style_2_callback()
+{
+    ob_start();
+    include ('includes/datafence_course_card_style_2.php');
+    $output = ob_get_clean();
+    return $output;
+}
+add_shortcode('datafence_course_card_style_2', 'datafence_course_card_style_2_callback');
+
+
 function datafence_team_callback()
 {
     ob_start();
@@ -150,20 +190,23 @@ function datafence_team2_callback()
 }
 add_shortcode('datafence_team2', 'datafence_team2_callback');
 
-function enqueue_custom_scripts() {
+function enqueue_custom_scripts()
+{
     wp_enqueue_script('jquery');
-    wp_enqueue_script('load-more-script', JS_DIR. '/load-more.js', array('jquery'), ASSET_VERSION, true);
+    wp_enqueue_script('load-more-script', JS_DIR . '/load-more.js', array('jquery'), ASSET_VERSION, true);
 
     // Localize script to pass Ajax URL
     wp_localize_script('load-more-script', 'ajax_params', array(
         'ajax_url' => admin_url('admin-ajax.php'),
-    ));
+    )
+    );
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
 
 
-function load_more_team_members() {
+function load_more_team_members()
+{
     $paged = $_POST['page'];
     $posts_per_page = 4; // Number of members to load per request
     $args = array(
@@ -174,8 +217,9 @@ function load_more_team_members() {
 
     $query = new WP_Query($args);
 
-    if ($query->have_posts()) :
-        while ($query->have_posts()) : $query->the_post();
+    if ($query->have_posts()):
+        while ($query->have_posts()):
+            $query->the_post();
             ?>
             <div class="team2__member">
                 <div class="team2__member-image">
@@ -189,7 +233,7 @@ function load_more_team_members() {
             <?php
         endwhile;
         wp_reset_postdata();
-    else :
+    else:
         echo 0;
     endif;
 
