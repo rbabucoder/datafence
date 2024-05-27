@@ -110,3 +110,31 @@
     }
   }
 }
+
+.join-our-team {
+  &-content-col {
+    .join-our-team-content-heading {
+      .elementor-heading-title {
+        font-size: 32px;
+        font-weight: 400;
+      }
+    }
+   .join-our-team-content-btn1{
+    .elementor-button{
+      background: transparent;
+      border: 1px solid $global-primary-color;
+      padding: 15px 20px;
+      color: #000;
+      border-radius: 50px;
+      font-weight: 600;
+    }
+   }
+   .join-our-team-content-btn2{
+    .elementor-button{
+      padding: 15px 20px;
+      border-radius: 50px;
+      background: $global-primary-color;
+    }
+   }
+  }
+}
