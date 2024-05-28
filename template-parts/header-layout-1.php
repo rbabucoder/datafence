@@ -62,7 +62,7 @@ class DataFence_Walker_Nav_Menu extends Walker_Nav_Menu {
         </nav><!-- .main-navigation -->
         <div class="header__actions">
             <button
-                class="header__quote-button common-button"><?php echo get_theme_mod('quote_button_text', __('Get A Quote', 'datafence')); ?></button>
+                class="header__quote-button common-button datafence-common-popup"><?php echo get_theme_mod('quote_button_text', __('Get A Quote', 'datafence')); ?></button>
             <div class="header__contact-info">
                 <?php
                 $contact_icon_image = get_theme_mod('contact_icon_image', '');
