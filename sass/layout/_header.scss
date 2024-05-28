@@ -17,6 +17,11 @@
       .main-navigation__list {
         display: flex;
         justify-content: space-evenly;
+        .current-menu-item.main-navigation__item{
+          a{
+            color: $global-primary-color;
+          }
+        }
         .menu-item-has-children {
           > a {
             color: $global-primary-color;
@@ -25,11 +30,11 @@
         .main-navigation__item {
           list-style: none;
 
-          &.menu-item-has-children {
-            a {
-              color: $global-primary-color;
-            }
-          }
+          // &.menu-item-has-children {
+          //   a {
+          //     color: $global-primary-color;
+          //   }
+          // }
           > a {
             text-decoration: none;
             font-weight: 600;
