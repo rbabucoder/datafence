@@ -7,7 +7,7 @@
                 <img class="header__logo" src="<?php echo IMAGE_DIR; ?>/datafence-logo.svg" alt="data-fence-logo">
             <?php endif; ?>
         </div><!-- .site-branding -->
-        <div class="container datafence-menu-burger" onclick="myFunction(this)">
+        <div class="container datafence-menu-burger">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>

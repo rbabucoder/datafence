@@ -1,4 +1,5 @@
-.footer-popup-overlay {
+.footer-popup-overlay,
+.course-popup-overlay {
   display: none;
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -86,8 +87,17 @@
       }
       .popup-form {
         form {
+          .name-email-field {
+            display: flex;
+            gap: 10px;
+            @media(max-width: 576px){
+              flex-direction: column;
+            }
+          }
+
           input,
-          textarea {
+          textarea,
+          select {
             padding: 15px 10px;
             background: #d9d9d9;
             width: 100%;
@@ -129,21 +139,23 @@
 }
 
 @media (max-width: 768px) {
-  .footer-popup-overlay {
+  .footer-popup-overlay,
+  .course-popup-overlay {
     .footer-popup {
       width: 100%;
       .footer-content-form {
         width: 100%;
-        .heading{
-            font-size: 20px;
+        .heading {
+          font-size: 20px;
         }
-        .desc{
-            font-size: 12px;
+        .desc {
+          font-size: 12px;
         }
-        .popup-form{
-            input, textarea{
-                margin-bottom: 5px;
-            }
+        .popup-form {
+          input,
+          textarea {
+            margin-bottom: 5px;
+          }
         }
       }
     }

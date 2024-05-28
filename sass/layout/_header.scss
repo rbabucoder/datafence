@@ -48,10 +48,10 @@
             background-color: #df0a0a;
             width: 100%;
             // display: none;
-            min-width: 148px;
+            min-width: 230px;
             transform: translateX(-50%);
             margin-top: 10px;
-
+            z-index: 9;
             li {
               text-align: center;
               z-index: 99999999;

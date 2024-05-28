@@ -368,8 +368,130 @@ function datafence_customize_register($wp_customize)
 
     /////////////////////////////////////////////////
 
+    //////////////////////////////////////////////////
+    //////////////// Common popup ///////////////////
+    // Add Section for Common Popup
+    $wp_customize->add_section('common_popup_section', array(
+        'title' => __('Common Popup Settings', 'your_theme_textdomain'),
+        'priority' => 31,
+    )
+    );
 
+    // Add Setting for Popup Heading
+    $wp_customize->add_setting('common_popup_heading', array(
+        'default' => __('Let’s Schedule a Call!', 'your_theme_textdomain'),
+        'sanitize_callback' => 'sanitize_text_field',
+    )
+    );
+    $wp_customize->add_control('common_popup_heading', array(
+        'label' => __('Popup Heading', 'your_theme_textdomain'),
+        'section' => 'common_popup_section',
+        'type' => 'text',
+    )
+    );
 
+    // Add Setting for Popup Description
+    $wp_customize->add_setting('common_popup_desc', array(
+        'default' => __('Please fill this form and someone from our team will get in touch on provided mobile & email address.', 'your_theme_textdomain'),
+        'sanitize_callback' => 'sanitize_textarea_field',
+    )
+    );
+    $wp_customize->add_control('common_popup_desc', array(
+        'label' => __('Popup Description', 'your_theme_textdomain'),
+        'section' => 'common_popup_section',
+        'type' => 'textarea',
+    )
+    );
+
+    // Add Setting for Contact Form 7 Shortcode
+    $wp_customize->add_setting('common_popup_shortcode', array(
+        'default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    )
+    );
+    $wp_customize->add_control('common_popup_shortcode', array(
+        'label' => __('Contact Form 7 Shortcode', 'your_theme_textdomain'),
+        'section' => 'common_popup_section',
+        'type' => 'text',
+    )
+    );
+
+    // Add Setting for Popup Image
+    $wp_customize->add_setting('common_popup_image', array(
+        'default' => '',
+        'sanitize_callback' => 'absint',
+    )
+    );
+    $wp_customize->add_control(new WP_Customize_Media_control($wp_customize, 'common_popup_image', array(
+        'label' => __('Popup Image', 'your_theme_textdomain'),
+        'section' => 'common_popup_section',
+        'mime_type' => 'image',
+    )
+    ));
+    /////////////////////////////////////////////////
+
+    ////////////////////////////////////////////////
+    // popup
+
+    // Add Section for Course Popup
+    $wp_customize->add_section('course_popup_section', array(
+        'title' => __('Course Popup Settings', 'your_theme_textdomain'),
+        'priority' => 30,
+    )
+    );
+
+    // Add Setting for Popup Heading
+    $wp_customize->add_setting('course_popup_heading', array(
+        'default' => __('Course Popup', 'your_theme_textdomain'),
+        'sanitize_callback' => 'sanitize_text_field',
+    )
+    );
+    $wp_customize->add_control('course_popup_heading', array(
+        'label' => __('Popup Heading', 'your_theme_textdomain'),
+        'section' => 'course_popup_section',
+        'type' => 'text',
+    )
+    );
+
+    // Add Setting for Popup Description
+    $wp_customize->add_setting('course_popup_desc', array(
+        'default' => __('Please fill this form and someone from our team will get in touch on provided mobile & email address.', 'your_theme_textdomain'),
+        'sanitize_callback' => 'sanitize_textarea_field',
+    )
+    );
+    $wp_customize->add_control('course_popup_desc', array(
+        'label' => __('Popup Description', 'your_theme_textdomain'),
+        'section' => 'course_popup_section',
+        'type' => 'textarea',
+    )
+    );
+
+    // Add Setting for Contact Form 7 Shortcode
+    $wp_customize->add_setting('course_popup_shortcode', array(
+        'default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    )
+    );
+    $wp_customize->add_control('course_popup_shortcode', array(
+        'label' => __('Contact Form 7 Shortcode', 'your_theme_textdomain'),
+        'section' => 'course_popup_section',
+        'type' => 'text',
+    )
+    );
+
+    // Add Setting for Popup Image
+    $wp_customize->add_setting('course_popup_image', array(
+        'default' => '',
+        'sanitize_callback' => 'absint',
+    )
+    );
+    $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'course_popup_image', array(
+        'label' => __('Popup Image', 'your_theme_textdomain'),
+        'section' => 'course_popup_section',
+        'mime_type' => 'image',
+    )
+    ));
+    /////////////////////////////////////////////////////////
 }
 
 

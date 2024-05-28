@@ -172,7 +172,7 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
-  $(".datafence-popup").on("click", function () {
+  $(".datafence-common-popup").on("click", function () {
     $(".footer-popup-overlay").css("display", "block");
   });
 
@@ -181,12 +181,25 @@ jQuery(document).ready(function ($) {
   });
 });
 
+
+jQuery(document).ready(function($){
+  $(".common-course-popup").on("click", function () {
+    $(".course-popup-overlay").css("display", "block");
+  });
+
+  $(".datafence-close-mark").on("click", function () {
+    $(".course-popup-overlay").css("display", "none");
+  });
+})
+
+
+
 // script.js
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   const tabs = $(".we-serve-btn");
   const contents = $(".we-serve-image-content");
 
-  tabs.click(function(e) {
+  tabs.click(function (e) {
     e.preventDefault();
     const tabId = $(this).attr("id");
     const contentId = tabId.replace("-button", "-content");
