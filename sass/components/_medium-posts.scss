@@ -1,0 +1,59 @@
+.custom-medium-posts {
+  .swiper-button-next {
+    right: 0 !important;
+  }
+  .swiper-button-prev {
+    left: 0 !important;
+  }
+  .medium-publication-feed-root-container {
+    width: 100% !important;
+  }
+  .grid-medium-publication-feed {
+    width: 100% !important;
+    .medium_publication_feed_data {
+      .grid-item-medium-publication-feed {
+        height: 100% !important;
+        .sk_medium_publication_feed_grid-content {
+          height: 465px !important;
+          padding: 15px !important;
+          .sk_medium_publication_content {
+            .sk-post-image {
+              margin-bottom: 10px;
+              height: 166px !important;
+              object-fit: cover;
+            }
+            .medium_publication_content {
+              .medium_publication_post_title {
+                font-size: 18px !important;
+                line-height: 1.2;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 2;
+              }
+              .medium_publication_post_meta {
+                .medium_publication_post_creator {
+                  font-size: 12px !important;
+                  font-weight: bold !important;
+                  margin-bottom: 10px;
+                }
+                .sk-description {
+                  display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  -webkit-line-clamp: 4;
+                }
+              }
+              .sk-read-more-btn {
+                background-color: $global-primary-color !important;
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
