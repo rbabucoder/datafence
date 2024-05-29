@@ -12,8 +12,9 @@
     if ($testimonials_query->have_posts()) :
         while ($testimonials_query->have_posts()) : $testimonials_query->the_post();
             // Get the custom fields
-            $author_name = get_field('author_name');
-            $author_designation = get_field('author_designation');
+            // $author_name = get_field('author_name');
+            // $author_designation = get_field('author_designation');
+            $testimonials_author_image = get_field('testimonials_author_image');
             // Get the post thumbnail URL
             $author_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 
@@ -26,8 +27,9 @@
                     <div class="testimonial__author">
                         <img class="testimonial__author-img" src="<?php echo esc_url($author_img_url); ?>" alt="author-img">
                         <div class="testimonial__author-details">
-                            <h5 class="testimonial__author-name"><?php echo esc_html($author_name); ?></h5>
-                            <p class="testimonial__author-role"><?php echo esc_html($author_designation); ?></p>
+                            <!-- <h5 class="testimonial__author-name"><?php // echo esc_html($author_name); ?></h5>
+                            <p class="testimonial__author-role"><?php // echo esc_html($author_designation); ?></p> -->
+                            <img src="<?php echo esc_url($testimonials_author_image) ?>" alt="">
                         </div>
                     </div>
                 </div>

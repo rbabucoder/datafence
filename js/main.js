@@ -1,4 +1,10 @@
 jQuery(document).ready(function ($) {
+
+  const datafenceMediumItems = $(".datafence-medium-blogs .rss_header").siblings("ul");
+  console.log(datafenceMediumItems);
+
+  datafenceMediumItems.addClass("datafence-medium-blogs-slider");
+
   const menuBurger = $(".datafence-menu-burger");
   const navMenu = $(".main-navigation__list");
 
@@ -138,11 +144,12 @@ jQuery(document).ready(function ($) {
     ],
   });
 
-  $(".real-people-slider").slick({
+  $(".real-people-slider, .datafence-medium-blogs-slider").slick({
     arrows: false,
     dots: false,
     infinite: true,
-    speed: 500,
+    autoplay: true,
+    speed: 200,
     slidesToShow: 3,
     slidesToScroll: 3,
     responsive: [

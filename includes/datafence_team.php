@@ -4,7 +4,8 @@
     // Query for team members
     $args = array(
         'post_type' => 'team',
-        'posts_per_page' => -1 // Retrieve all team member posts
+        // 'posts_per_page' => -1 // Retrieve all team member posts
+        'posts_per_page' => intval($atts['team_member_to_show']) // Retrieve all team member posts
     );
     $team_query = new WP_Query($args);
 

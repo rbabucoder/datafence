@@ -171,8 +171,18 @@ function datafence_course_card_style_2_callback()
 add_shortcode('datafence_course_card_style_2', 'datafence_course_card_style_2_callback');
 
 
-function datafence_team_callback()
+function datafence_team_callback($atts)
 {
+
+    // Set default attributes and merge with user-provided attributes
+    $atts = shortcode_atts(
+        array(
+            'team_member_to_show' => -1 // Default is to show all posts
+        ),
+        $atts,
+        'datafence_team'
+    );
+
     ob_start();
     include ('includes/datafence_team.php');
     $output = ob_get_clean();
