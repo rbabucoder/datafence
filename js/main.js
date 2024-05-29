@@ -171,6 +171,11 @@ jQuery(document).ready(function ($) {
   ).append('<i class="fa-solid fa-chevron-down"></i>');
 });
 
+jQuery(document).ready(function($){
+  const playButton = $(".custom-play-button");
+  playButton.append('<div class="circle-ripple-small custom-play-icon""><i class="fa-solid fa-play"></i></div>');
+})
+
 jQuery(document).ready(function ($) {
   $(".datafence-common-popup").on("click", function () {
     $(".footer-popup-overlay").css("display", "block");

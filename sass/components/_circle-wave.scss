@@ -1,0 +1,108 @@
+// // Variables
+$waves_color: #9ef5ff;
+
+// .circle-ripple-small {
+.custom-icon-wave .elementor-custom-embed-play {
+  background-color: #c4ffed;
+  border-radius: 50%;
+  animation: ripple-small 1.6s linear infinite;
+  top: 48%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg{
+    fill: #000;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.circle-ripple {
+  background-color: #c4ffed;
+  border-radius: 50%;
+  animation: ripple 1.6s linear infinite;
+}
+
+@keyframes ripple-small {
+  0% {
+    box-shadow: 0 0 0 0 rgba($waves_color, 0.3),
+      0 0 0 0.2em rgba($waves_color, 0.3), 0 0 0 0.5em rgba($waves_color, 0.3),
+      0 0 0 1em rgba($waves_color, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 1em rgba($waves_color, 0.3),
+      0 0 0 0.5em rgba($waves_color, 0.3), 0 0 0 0.9em rgba($waves_color, 0.3),
+      0 0 0 1.5em rgba($waves_color, 0);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba($waves_color, 0.3),
+      0 0 0 1em rgba($waves_color, 0.3), 0 0 0 3em rgba($waves_color, 0.3),
+      0 0 0 5em rgba($waves_color, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 1em rgba($waves_color, 0.3),
+      0 0 0 3em rgba($waves_color, 0.3), 0 0 0 5em rgba($waves_color, 0.3),
+      0 0 0 8em rgba($waves_color, 0);
+  }
+}
+
+// .custom-play-button {
+// //   position: relative;
+// //   &::before {
+// //     content: "";
+// //     position: absolute;
+// //     top: 48%;
+// //     left: 50%;
+// //     transform: translate(-50%, -50%);
+// //     width: 20px;
+// //     height: 20px;
+// //     background: #000;
+// //   }
+//   .custom-play-icon {
+//     position: absolute;
+//     top: 48%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     .fa-play {
+//       font-size: 10px;
+//       color: #000;
+//     }
+//   }
+// }
+
+// // .comp-blog-list {
+// //   .audio-icon {
+// //     position: absolute;
+// //     margin-top: 5px;
+// //     margin-left: -35px;
+// //   }
+// //   img.audio-icon {
+// //     display: inline-block;
+// //     width: 30px;
+// //     position: absolute;
+// //     right: 70px;
+// //     margin-top: 30px;
+// //     @media (max-width: 425px) {
+// //       right: 50px;
+// //       margin-top: 100px;
+// //     }
+// //   }
+
+// // }
+
+.sales-boost-image-col {
+  .sales-boost-img {
+    .elementor-custom-embed-play {
+    }
+    .attachment-full {
+      min-height: 512px;
+      object-fit: contain;
+    }
+  }
+}
