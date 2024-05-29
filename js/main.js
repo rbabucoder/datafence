@@ -1,7 +1,6 @@
 jQuery(document).ready(function ($) {
 
   const datafenceMediumItems = $(".datafence-medium-blogs .rss_header").siblings("ul");
-  console.log(datafenceMediumItems);
 
   datafenceMediumItems.addClass("datafence-medium-blogs-slider");
 
