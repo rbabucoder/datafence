@@ -243,3 +243,16 @@
 //     }
 //   }
 // }
+
+
+@media(max-width: 576px){
+  .header{
+    padding-bottom: 0;
+    .main-navigation{
+      margin: 0;
+      .main-navigation__list{
+        padding-bottom: 40px;
+      }
+    }
+  }
+}
