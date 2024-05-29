@@ -215,3 +215,10 @@ jQuery(document).ready(function ($) {
   tabs.first().addClass("active");
   contents.first().addClass("active");
 });
+
+
+jQuery(document).ready(function($){
+  const changeLogoElement = $(".page-course-landing-page .header .header__branding img");
+  changeLogoElement.attr("src", ""); // First empty the src attribute
+  changeLogoElement.attr("src", "https://datafence.com/wp-content/themes/datafence/images/datafence-logo.svg"); // Then set the new src attribute
+});
