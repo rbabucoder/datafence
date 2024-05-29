@@ -10,7 +10,6 @@ $footer_title_col2 = get_theme_mod('footer_title_col2', 'Explore');
 $footer_menu_col1_id = get_theme_mod('footer_menu_col1');
 $footer_menu_col2_id = get_theme_mod('footer_menu_col2');
 $footer_bar_menu_id = get_theme_mod('footer_bar_menu');
-$footer_bar_content = get_theme_mod('footer_bar_content');
 
 $footer_menu_col1 = '';
 $footer_menu_col2 = '';
@@ -123,41 +122,48 @@ if ($footer_bar_menu_id) {
 
         </div>
         <div class="footer__company-section">
-            <h3 class="footer__title"><?php echo esc_html($footer_title_col1); ?></h3>
-            <ul class="footer__list">
-                <?php echo $footer_menu_col1; ?>
-            </ul>
-        </div>
-        <!-- <div class="footer__company-section">
-            <h3 class="footer__title">Company</h3>
-            <ul class="footer__list">
+            <!-- <h3 class="footer__title">Company</h3> -->
+            <h3 class="footer__title"><?php echo get_theme_mod('footer_title', __('Company', 'mytheme')); ?></h3>
+
+            <?php
+            $features_menu_id = get_theme_mod('footer_menu_3');
+            if ($features_menu_id) {
+                wp_nav_menu(array('menu' => $features_menu_id, 'menu_class' => 'footer__list'));
+            }
+            ?>
+            <!-- <ul class="footer__list">
                 <li class="footer__list-item"><a href="#" class="footer__link">About Us</a></li>
                 <li class="footer__list-item"><a href="#" class="footer__link">Services</a></li>
                 <li class="footer__list-item"><a href="#" class="footer__link">FAQ</a></li>
                 <li class="footer__list-item"><a href="#" class="footer__link">Blog Standard</a></li>
                 <li class="footer__list-item"><a href="#" class="footer__link">Contact Us</a></li>
-            </ul>
-        </div> -->
-        <!-- <div class="footer__solutions-section">
-            <h3 class="footer__title">Solutions</h3>
-            <ul class="footer__list">
+            </ul> -->
+        </div>
+        <div class="footer__solutions-section">
+        <h3 class="footer__title"><?php echo get_theme_mod('footer_title_2', __('Solutions', 'mytheme')); ?></h3>
+            <!-- <h3 class="footer__title">Solutions</h3> -->
+            <!-- <ul class="footer__list">
                 <li class="footer__list-item"><a href="#" class="footer__link">Advanced Analytic</a></li>
                 <li class="footer__list-item"><a href="#" class="footer__link">Business Services</a></li>
                 <li class="footer__list-item"><a href="#" class="footer__link">Consulting Services</a></li>
                 <li class="footer__list-item"><a href="#" class="footer__link">Consumer Product</a></li>
                 <li class="footer__list-item"><a href="#" class="footer__link">Financial Services</a></li>
-            </ul>
-        </div> -->
-        <div class="footer__solutions-section">
-            <h3 class="footer__title"><?php echo esc_html($footer_title_col2); ?></h3>
-            <ul class="footer__list">
-                <?php echo $footer_menu_col2; ?>
-            </ul>
+            </ul> -->
+            <?php
+            $features_menu_id = get_theme_mod('footer_menu_3');
+            if ($features_menu_id) {
+                wp_nav_menu(array('menu' => $features_menu_id, 'menu_class' => 'footer__list'));
+            }
+            ?>
         </div>
         <div class="footer__newsletter-section">
             <div class="footer__newsletter-content">
-                <h4 class="footer__newsletter-title">Newsletter Subscribe</h4>
-                <p class="footer__newsletter-description">You get weekly update on your email-no spam email.</p>
+                <!-- <h4 class="footer__newsletter-title">Newsletter Subscribe</h4> -->
+                <!-- <p class="footer__newsletter-description">You get weekly update on your email-no spam email.</p> -->
+                <h4 class="footer__newsletter-title"><?php echo get_theme_mod('footer_newsletter_title', __('Newsletter Subscribe', 'mytheme')); ?></h4>
+                <p class="footer__newsletter-description"><?php echo get_theme_mod('footer_newsletter_description', __('You get weekly update on your email-no spam email.', 'mytheme')); ?></p>
+
+
                 <?php echo do_shortcode('[contact-form-7 id="b3a3abd" title="Footer Form"]'); ?>
             </div>
         </div>
@@ -166,13 +172,16 @@ if ($footer_bar_menu_id) {
     <div class="footer__bar">
         <div class="container footer__bar-container">
             <div class="footer__bar-content">
-                <?php echo wp_kses_post($footer_bar_content); ?>
+                <p><?php echo esc_html(get_theme_mod('footer_text', __('Default footer text', 'datafence'))); ?></p>
             </div>
-            <?php if ($footer_bar_menu): ?>
-                <ul class="footer__bar-list">
-                    <?php echo $footer_bar_menu; ?>
-                </ul>
-            <?php endif; ?>
+            <div class="menu-footer-bar-container">
+                <?php
+                $footer_bar_menu = get_theme_mod('footer_bar_menu');
+                if ($footer_bar_menu) {
+                    wp_nav_menu(array('menu' => $footer_bar_menu, 'menu_class' => 'footer__bar-list'));
+                }
+                ?>
+            </div>
         </div>
     </div>
 </footer><!-- .footer -->

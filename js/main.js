@@ -171,10 +171,12 @@ jQuery(document).ready(function ($) {
   ).append('<i class="fa-solid fa-chevron-down"></i>');
 });
 
-jQuery(document).ready(function($){
-  const playButton = $(".custom-play-button");
-  playButton.append('<div class="circle-ripple-small custom-play-icon""><i class="fa-solid fa-play"></i></div>');
-})
+// jQuery(document).ready(function ($) {
+//   const playButton = $(".custom-play-button");
+//   playButton.append(
+//     '<div class="circle-ripple-small custom-play-icon""><i class="fa-solid fa-play"></i></div>'
+//   );
+// });
 
 jQuery(document).ready(function ($) {
   $(".datafence-common-popup").on("click", function () {
@@ -186,8 +188,7 @@ jQuery(document).ready(function ($) {
   });
 });
 
-
-jQuery(document).ready(function($){
+jQuery(document).ready(function ($) {
   $(".common-course-popup").on("click", function () {
     $(".course-popup-overlay").css("display", "block");
   });
@@ -195,9 +196,7 @@ jQuery(document).ready(function($){
   $(".datafence-close-mark").on("click", function () {
     $(".course-popup-overlay").css("display", "none");
   });
-})
-
-
+});
 
 // script.js
 jQuery(document).ready(function ($) {
@@ -221,9 +220,13 @@ jQuery(document).ready(function ($) {
   contents.first().addClass("active");
 });
 
-
-jQuery(document).ready(function($){
-  const changeLogoElement = $(".page-course-landing-page .header .header__branding img");
+jQuery(document).ready(function ($) {
+  const changeLogoElement = $(
+    ".page-course-landing-page .header .header__branding img"
+  );
   changeLogoElement.attr("src", ""); // First empty the src attribute
-  changeLogoElement.attr("src", "https://datafence.com/wp-content/themes/datafence/images/datafence-logo.svg"); // Then set the new src attribute
+  changeLogoElement.attr(
+    "src",
+    "https://datafence.com/wp-content/themes/datafence/images/datafence-logo.svg"
+  ); // Then set the new src attribute
 });
