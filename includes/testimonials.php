@@ -9,8 +9,9 @@
     $testimonials_query = new WP_Query($args);
 
     // Check if there are any testimonials posts
-    if ($testimonials_query->have_posts()) :
-        while ($testimonials_query->have_posts()) : $testimonials_query->the_post();
+    if ($testimonials_query->have_posts()):
+        while ($testimonials_query->have_posts()):
+            $testimonials_query->the_post();
             // Get the custom fields
             // $author_name = get_field('author_name');
             // $author_designation = get_field('author_designation');
@@ -19,24 +20,25 @@
             $author_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 
             // Ensure that all necessary fields are available
-            if ($author_name && $author_designation && $author_img_url) :
-                ?>
-                <div class="testimonial__content" style="width: 100%; display: inline-block;">
-                    <img class="testimonial__quote-icon" src="<?php echo esc_url(IMAGE_DIR); ?>/quote.svg" alt="quote">
-                    <div class="testimonial__text"><?php the_content(); ?></div>
-                    <div class="testimonial__author">
-                        <img class="testimonial__author-img" src="<?php echo esc_url($author_img_url); ?>" alt="author-img">
-                        <div class="testimonial__author-details">
-                            <!-- <h5 class="testimonial__author-name"><?php // echo esc_html($author_name); ?></h5>
-                            <p class="testimonial__author-role"><?php // echo esc_html($author_designation); ?></p> -->
-                            <img src="<?php echo esc_url($testimonials_author_image) ?>" alt="">
-                        </div>
+            // if ($author_name && $author_designation && $author_img_url):
+            // if ($testimonials_author_image && $author_img_url):
+            ?>
+            <div class="testimonial__content" style="width: 100%; display: inline-block;">
+                <img class="testimonial__quote-icon" src="<?php echo esc_url(IMAGE_DIR); ?>/quote.svg" alt="quote">
+                <div class="testimonial__text"><?php the_content(); ?></div>
+                <div class="testimonial__author">
+                    <img class="testimonial__author-img" src="<?php echo esc_url($author_img_url); ?>" alt="author-img">
+                    <div class="testimonial__author-details">
+                        <!-- <h5 class="testimonial__author-name"><?php // echo esc_html($author_name); ?></h5> -->
+                        <!-- <p class="testimonial__author-role"><?php // echo esc_html($author_designation); ?></p> -->
+                        <img src="<?php echo esc_url($testimonials_author_image) ?>" alt="">
                     </div>
                 </div>
-            <?php endif; ?>
+            </div>
+            <?php // endif; ?>
         <?php endwhile;
         wp_reset_postdata(); // Reset the global post object
-    else : ?>
+    else: ?>
         <p><?php _e('No testimonials found.', 'text-domain'); ?></p>
     <?php endif; ?>
 </div>

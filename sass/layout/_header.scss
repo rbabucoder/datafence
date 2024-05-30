@@ -17,8 +17,8 @@
       .main-navigation__list {
         display: flex;
         justify-content: space-evenly;
-        .current-menu-item.main-navigation__item{
-          a{
+        .current-menu-item.main-navigation__item {
+          a {
             color: $global-primary-color;
           }
         }
@@ -85,6 +85,9 @@
       display: flex;
       gap: 10px;
       justify-content: space-between;
+      .header__quote-button {
+        font-weight: 600;
+      }
       .header__contact-info {
         display: flex;
         gap: 10px;
@@ -244,13 +247,12 @@
 //   }
 // }
 
-
-@media(max-width: 576px){
-  .header{
+@media (max-width: 576px) {
+  .header {
     padding-bottom: 0;
-    .main-navigation{
+    .main-navigation {
       margin: 0;
-      .main-navigation__list{
+      .main-navigation__list {
         padding-bottom: 40px;
       }
     }
