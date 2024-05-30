@@ -56,10 +56,11 @@
             background-color: #df0a0a;
             width: 100%;
             // display: none;
-            min-width: 230px;
+            // min-width: 230px;
             transform: translateX(-50%);
             margin-top: 10px;
             z-index: 9;
+            width: max-content;
             li {
               text-align: center;
               z-index: 99999999;
