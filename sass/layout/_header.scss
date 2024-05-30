@@ -17,6 +17,7 @@
       .main-navigation__list {
         display: flex;
         justify-content: space-evenly;
+        
         .current-menu-item.main-navigation__item {
           a {
             color: $global-primary-color;
@@ -28,7 +29,8 @@
           }
         }
         .main-navigation__item {
-          list-style: none;
+          list-style: none; 
+          margin-right: 20px;
 
           // &.menu-item-has-children {
           //   a {

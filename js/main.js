@@ -27,10 +27,10 @@ jQuery(document).ready(function ($) {
       $(".menu-item-has-children").off("mouseenter mouseleave"); // Remove previous hover event handlers
       $(".menu-item-has-children").hover(
         function () {
-          $(this).children(".submenu").stop(true, true).slideDown("slow"); // Slide down the submenu on hover
+          $(this).children(".submenu").stop(true, true).slideDown("fast"); // Slide down the submenu on hover
         },
         function () {
-          $(this).children(".submenu").stop(true, true).slideUp("slow"); // Slide up the submenu on mouse leave
+          $(this).children(".submenu").stop(true, true).slideUp("fast"); // Slide up the submenu on mouse leave
         }
       );
     }
